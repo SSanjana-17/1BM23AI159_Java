@@ -1,0 +1,32 @@
+package BM23AI159;
+
+public class Wrapper {
+    public static void main (String[] args){
+        Integer boxedInt = Integer.valueOf(10);
+        Double boxedDouble = Double.valueOf(20.5);
+        Character boxedChar = Character.valueOf('A');
+        Float boxedFloat = Float.valueOf(9.79f);
+        Boolean boxedBoolean = Boolean.valueOf(true);
+
+        System.out.println("boxed integer:"+ boxedInt);
+        System.out.println("boxed Double:"+ boxedDouble);
+        System.out.println("boxed Character:"+ boxedChar);
+        System.out.println("boxed Float:"+ boxedFloat);
+        System.out.println("boxed Boolean:"+ boxedBoolean);
+
+        int unboxedInt = boxedInt.intValue();
+        double unboxedDouble = boxedDouble.doubleValue();
+        float unboxedFloat = boxedFloat.floatValue();
+        char unboxedChar = boxedChar.charValue();
+        boolean unboxedBool = boxedBoolean.booleanValue();
+
+        System.out.println("unboxed integer:"+ unboxedInt);
+        System.out.println("unboxed Double:"+ unboxedDouble);
+        System.out.println("unboxed Character:"+ unboxedFloat);
+        System.out.println("unboxed Float:"+ unboxedChar);
+        System.out.println("unboxed Boolean:"+ unboxedBool);
+
+
+
+    }
+}
