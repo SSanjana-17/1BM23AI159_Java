@@ -1,0 +1,52 @@
+package BM23AI159;
+import java.util.Scanner;
+public class StringBuffer {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        StringBuilder sb = new StringBuilder(input);
+        System.out.println("length: " + sb.length());
+        System.out.println("Capacity: " + sb.capacity());
+        sb.append(" Java");
+        System.out.println("After append(\" Java\"): " + sb);
+        sb.insert(2, "XX");
+        System.out.println("After insert(2, \"XX\"): " + sb);
+        if (sb.length() > 4) {
+            sb.delete(2, 4);
+        }
+        sb.reverse();
+        System.out.println("After reverse(): " + sb);
+        if (sb.length() > 2) {
+            sb.deleteCharAt(2);
+        }
+        System.out.println("After deleteCharAt(2): " + sb);
+        System.out.println("After deleteCharAt(1): " + sb);
+        if (sb.length() > 4) {
+            sb.replace(1, 4, "ABC");
+        }
+        System.out.println("After replace(1, 4, \"ABC\"): " + sb);
+        String searchStr = "Java";
+        int index = sb.indexOf(searchStr);
+        System.out.println("Index of \"" + searchStr + "\": " + index);
+
+
+
+
+        scanner.close();
+        }
+    }
+
+
+output:
+Enter a string: rakshitha
+length: 9
+Capacity: 25
+After append(" Java"): rakshitha Java
+After insert(2, "XX"): raXXkshitha Java
+After reverse(): avaJ ahtihskar
+After deleteCharAt(2): avJ ahtihskar
+After deleteCharAt(1): avJ ahtihskar
+After replace(1, 4, "ABC"): aABCahtihskar
+Index of "Java": -1
