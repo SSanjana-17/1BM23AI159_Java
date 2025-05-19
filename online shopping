@@ -48,3 +48,15 @@ public class onlineshopping{
 
     }
 }
+
+
+output:
+Inventory
+Name : pizza Price : 230.0 Category : food
+Name : sprite Price : 50.0 Category : Drinks
+Name : apple Price : 50.0 Category : Fruite
+Name : dosa Price : 50.0 Category : food
+Inventory
+Name : pizza Price : 230.0 Category : food
+Name : sprite Price : 50.0 Category : Drinks
+Name : apple Price : 50.0 Category : Fruite
