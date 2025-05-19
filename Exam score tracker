@@ -1,34 +1,40 @@
 import java.util.Scanner;
 
 class Student {
-    private int score;
+    String name;
+    int score;
 
-    public Student(int score) {
+    public Student(String name, int score) {
+        this.name = name;
         this.score = score;
     }
 
-    public int getScore() {
-        return score;
+    public void display() {
+        System.out.println("Name: " + name + ", Score: " + score);
     }
 }
 
 public class ExamScoreTracker {
     public static void main(String[] args) {
-        Student[] students = new Student[5];
-        Scanner scanner = new Scanner(System.in);
-        int sum = 0, highestScore = Integer.MIN_VALUE;
+        final int NUM_STUDENTS = 5;
+        Student[] students = new Student[NUM_STUDENTS];
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Enter score for student " + (i + 1) + ": ");
-            int score = scanner.nextInt();
-            students[i] = new Student(score);
-            sum += score;
-            if (score > highestScore) highestScore = score;
+        students[0] = new Student("Anu", 85);
+        students[1] = new Student("Bob", 92);
+        students[2] = new Student("Eva", 67);
+        students[3] = new Student("Sam", 85);
+        students[4] = new Student("Ram", 76);
+
+        for (int i = 0; i < NUM_STUDENTS; i++) {
+            students[i].display();
         }
-
-        System.out.println("Total sum of all scores: " + sum);
-        System.out.println("Highest score attained: " + highestScore);
-
-        scanner.close();
     }
 }
+
+Output:
+
+Name: Anu, Score: 85
+Name: Bob, Score: 92
+Name: Eva, Score: 67
+Name: Sam, Score: 85
+Name: Ram, Score: 76
